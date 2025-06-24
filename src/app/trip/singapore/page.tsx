@@ -133,7 +133,8 @@ export default function BusinessReport() {
           {
             time: "9:30 AM",
             title: "Technology Workshops",
-            description: "Hands-on session with new microchip technologies and AI",
+            description:
+              "Hands-on session with new microchip technologies and AI",
             image:
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYXwLNz4a-FnhSUS8c_q4X1Si1_0k857LrEw&s",
             imageAlt: "Technology workshop session",
@@ -157,7 +158,8 @@ export default function BusinessReport() {
           {
             time: "6:00 PM",
             title: "Departure from Singapore",
-            description: "Singapore Changi Airport to Phnom Penh International Airport",
+            description:
+              "Singapore Changi Airport to Phnom Penh International Airport",
             image:
               "https://singaporetravelinsider.com/wp-content/uploads/2022/12/hotel-shuttle-changi-airport-1024x682.jpg",
             imageAlt: "Airport departure gate",
@@ -504,21 +506,6 @@ export default function BusinessReport() {
           </motion.section>
         </div>
       </main>
-
-      {/* Enhanced Footer */}
-      <motion.footer
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="border-t border-gray-100 py-6"
-      >
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-gray-500">
-            © 2025 Six Senergy. All rights reserved.
-          </p>
-        </div>
-      </motion.footer>
     </div>
   );
 }
