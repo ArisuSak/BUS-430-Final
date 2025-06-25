@@ -5,7 +5,6 @@ import {
   Calendar,
   Clock,
   User,
-  Tag,
   Search,
   ArrowRight,
   Heart,
@@ -32,19 +31,29 @@ export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Technology", "Business", "Travel", "Innovation", "Insights"];
+  const categories = [
+    "All",
+    "Technology",
+    "Business",
+    "Travel",
+    "Innovation",
+    "Insights",
+  ];
 
   const blogPosts = [
     {
       id: 1,
       title: "The Future of AI in Business Operations",
-      excerpt: "Exploring how artificial intelligence is revolutionizing the way businesses operate and make decisions in the digital age.",
-      content: "Artificial intelligence is transforming business operations across industries. From automated customer service to predictive analytics, AI is enabling companies to work smarter and more efficiently...",
+      excerpt:
+        "Exploring how artificial intelligence is revolutionizing the way businesses operate and make decisions in the digital age.",
+      content:
+        "Artificial intelligence is transforming business operations across industries. From automated customer service to predictive analytics, AI is enabling companies to work smarter and more efficiently...",
       author: "Sarah Chen",
       date: "2024-12-20",
       readTime: "5 min read",
       category: "Technology",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
       tags: ["AI", "Business", "Automation"],
       likes: 42,
       comments: 12,
@@ -52,13 +61,16 @@ export default function BlogPage() {
     {
       id: 2,
       title: "Singapore Tech Exhibition: Key Takeaways",
-      excerpt: "Our recent trip to Singapore's premier technology exhibition revealed exciting trends in microchip technology and AI integration.",
-      content: "The Singapore Technology Exhibition provided invaluable insights into the latest developments in semiconductor technology. Key highlights included breakthrough in nanometer processing...",
+      excerpt:
+        "Our recent trip to Singapore's premier technology exhibition revealed exciting trends in microchip technology and AI integration.",
+      content:
+        "The Singapore Technology Exhibition provided invaluable insights into the latest developments in semiconductor technology. Key highlights included breakthrough in nanometer processing...",
       author: "Michael Prom",
       date: "2024-12-18",
       readTime: "7 min read",
       category: "Travel",
-      image: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&h=400&fit=crop",
       tags: ["Singapore", "Technology", "Exhibition"],
       likes: 38,
       comments: 8,
@@ -66,13 +78,16 @@ export default function BlogPage() {
     {
       id: 3,
       title: "Building Sustainable Tech Solutions",
-      excerpt: "How modern technology companies are integrating sustainability into their core business strategies and product development.",
-      content: "Sustainability is no longer just a buzzword in the tech industry. Companies are actively developing solutions that reduce environmental impact while maintaining innovation...",
+      excerpt:
+        "How modern technology companies are integrating sustainability into their core business strategies and product development.",
+      content:
+        "Sustainability is no longer just a buzzword in the tech industry. Companies are actively developing solutions that reduce environmental impact while maintaining innovation...",
       author: "Elena Rodriguez",
       date: "2024-12-15",
       readTime: "6 min read",
       category: "Innovation",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=400&fit=crop",
       tags: ["Sustainability", "Green Tech", "Innovation"],
       likes: 55,
       comments: 15,
@@ -80,13 +95,16 @@ export default function BlogPage() {
     {
       id: 4,
       title: "Digital Transformation in Small Businesses",
-      excerpt: "A comprehensive guide to implementing digital solutions that can help small businesses compete in today's market.",
-      content: "Small businesses face unique challenges when adopting digital technologies. This guide explores practical strategies for digital transformation...",
+      excerpt:
+        "A comprehensive guide to implementing digital solutions that can help small businesses compete in today's market.",
+      content:
+        "Small businesses face unique challenges when adopting digital technologies. This guide explores practical strategies for digital transformation...",
       author: "James Wilson",
       date: "2024-12-12",
       readTime: "8 min read",
       category: "Business",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
       tags: ["Digital Transformation", "Small Business", "Strategy"],
       likes: 29,
       comments: 6,
@@ -94,13 +112,16 @@ export default function BlogPage() {
     {
       id: 5,
       title: "The Rise of Remote Work Technology",
-      excerpt: "Examining the tools and technologies that have made remote work not just possible, but highly effective for modern teams.",
-      content: "The pandemic accelerated the adoption of remote work technologies. Today, sophisticated collaboration tools enable distributed teams to work seamlessly...",
+      excerpt:
+        "Examining the tools and technologies that have made remote work not just possible, but highly effective for modern teams.",
+      content:
+        "The pandemic accelerated the adoption of remote work technologies. Today, sophisticated collaboration tools enable distributed teams to work seamlessly...",
       author: "Amanda Foster",
       date: "2024-12-10",
       readTime: "4 min read",
       category: "Technology",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=400&fit=crop",
       tags: ["Remote Work", "Collaboration", "Technology"],
       likes: 67,
       comments: 21,
@@ -108,23 +129,28 @@ export default function BlogPage() {
     {
       id: 6,
       title: "Understanding Blockchain Beyond Cryptocurrency",
-      excerpt: "Exploring the practical applications of blockchain technology in supply chain, healthcare, and other industries.",
-      content: "While blockchain is often associated with cryptocurrency, its applications extend far beyond digital currency. From supply chain transparency to secure medical records...",
+      excerpt:
+        "Exploring the practical applications of blockchain technology in supply chain, healthcare, and other industries.",
+      content:
+        "While blockchain is often associated with cryptocurrency, its applications extend far beyond digital currency. From supply chain transparency to secure medical records...",
       author: "David Kim",
       date: "2024-12-08",
       readTime: "9 min read",
       category: "Insights",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=400&fit=crop",
       tags: ["Blockchain", "Supply Chain", "Healthcare"],
       likes: 43,
       comments: 18,
     },
   ];
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
+  const filteredPosts = blogPosts.filter((post) => {
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory =
+      selectedCategory === "All" || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
@@ -146,7 +172,8 @@ export default function BlogPage() {
                 Six Senergy Blog
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Insights, innovations, and stories from the world of technology and business
+                Insights, innovations, and stories from the world of technology
+                and business
               </p>
             </motion.div>
 
@@ -191,7 +218,9 @@ export default function BlogPage() {
           className="py-16 px-4"
         >
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl font-light text-gray-900 mb-8">Featured Article</h2>
+            <h2 className="text-2xl font-light text-gray-900 mb-8">
+              Featured Article
+            </h2>
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer"
@@ -256,7 +285,7 @@ export default function BlogPage() {
               Latest Articles ({filteredPosts.length})
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.slice(1).map((post, index) => (
+              {filteredPosts.slice(1).map((post) => (
                 <motion.article
                   key={post.id}
                   variants={fadeInUp}
@@ -342,7 +371,8 @@ export default function BlogPage() {
               Stay Updated
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter and get the latest insights, trends, and stories delivered directly to your inbox.
+              Subscribe to our newsletter and get the latest insights, trends,
+              and stories delivered directly to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
