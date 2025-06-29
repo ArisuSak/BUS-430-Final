@@ -349,7 +349,7 @@ export default function ThailandTripPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main className="pt-20">
+      <main className="pt-30">
         <motion.div
           initial="initial"
           animate="animate"
