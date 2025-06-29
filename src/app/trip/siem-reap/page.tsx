@@ -42,7 +42,7 @@ export default function BusinessReport() {
     title: "Business Trip to Siem Reap",
     subtitle: "Expansion Site Scouting for Future Development",
     description:
-      "A five-day business delegation will travel to Siem Reap from 15–19 February 2025 to evaluate potential locations for the expansion of our company. The mission is to analyze strategic areas based on foot traffic, infrastructure, accessibility, surrounding commercial activity, and potential for brand visibility. The team will visit five key zones in Siem Reap and engage with local stakeholders and community leaders to understand growth opportunities.",
+      "A five-day business delegation will travel to Siem Reap from 15–19 February 2025 to evaluate potential locations for the expansion of our company. The mission is to analyze strategic areas based on foot traffic, infrastructure, accessibility, surrounding commercial activity, and potential for expansion of the company",
     stats: [
       {
         icon: <Calendar className="h-4 w-4 text-gray-600" />,
@@ -77,7 +77,7 @@ export default function BusinessReport() {
             imageAlt: "Larryta Bus",
           },
           {
-            time: "1:30 PM",
+            time: "1:30 PM - 2:30 PM",
             title: "Arrival in Siem Reap",
             description:
               "Arrival in Siem Reap and check-in at Bopha Wat Bo Residence",
@@ -105,29 +105,29 @@ export default function BusinessReport() {
         date: "Saturday, 15 February 2025",
         events: [
           {
-            time: "8:00 AM",
+            time: "8:00 AM – 9:00 AM",
             title: "Breakfast at the Hotel",
             description: "Blend of international and local dishes",
             image: "/siemreap/breakfast-1.png",
             imageAlt: "Hotel breakfast buffet",
           },
           {
-            time: "9:30 AM",
-            title: "Walking survey of Pub Street and Old Market",
+            time: "9:30 AM – 12:00 PM",
+            title: "Site visit at Pub Street and Old Market",
             description:
               "Inspect commercial properties for lease or purchase, assessing infrastructure, accessibility, and nearby businesses.",
             image: "/siemreap/old-market.png",
-            imageAlt: "Walking survey",
+            imageAlt: "Site visit",
           },
           {
-            time: "12:30 PM",
+            time: "12:30 PM – 1:30 PM",
             title: "Lunch at Malis Restaurant",
             description: "Traditional Khmer cuisine with a modern twist",
             image: "/siemreap/malis.png",
             imageAlt: "Malis Restaurant",
           },
           {
-            time: "2:00 PM",
+            time: "2:00 PM – 4:00 PM",
             title: "Interview with nearby business owners and vendors",
             description:
               "Gather insights on local market conditions and business climate.",
@@ -135,7 +135,7 @@ export default function BusinessReport() {
             imageAlt: "Airport departure gate",
           },
           {
-            time: "4:30 PM",
+            time: "4:30 PM – 6:00 PM",
             title: "Team debrief and note consolidation",
             description: "Review findings and prepare for next day’s visits",
             image: "/siemreap/team-met-1.png",
@@ -155,14 +155,14 @@ export default function BusinessReport() {
         date: "Sunday, 16 February 2025",
         events: [
           {
-            time: "8:00 AM",
+            time: "8:00 AM – 9:00 AM",
             title: "Breakfast at the Hotel",
             description: "Blend of international and local dishes",
             image: "/siemreap/break-2.png",
             imageAlt: "Hotel breakfast buffet",
           },
           {
-            time: "9:00 AM",
+            time: "9:30 AM – 12:00 PM",
             title: "Survey of Wat Bo Road area",
             description:
               "Inspect commercial properties for lease or purchase, assessing infrastructure, accessibility, and nearby businesses.",
@@ -170,14 +170,14 @@ export default function BusinessReport() {
             imageAlt: "Walking survey",
           },
           {
-            time: "12:30 PM",
+            time: "12:30 PM – 1:30 PM",
             title: "Lunch at The Bean Embassy Roastery & Specialty Coffee",
             description: "Specialty coffee and light bites",
             image: "/siemreap/coffee-bean.png",
             imageAlt: "The Bean Embassy Roastery & Specialty Coffee",
           },
           {
-            time: "2:00 PM",
+            time: "2:00 PM – 4:00 PM ",
             title: "Exploration of 7 Makara Road corridor",
             description:
               "Assess commercial properties and surrounding infrastructure.",
@@ -185,7 +185,7 @@ export default function BusinessReport() {
             imageAlt: "Airport departure gate",
           },
           {
-            time: "4:30 PM",
+            time: "4:30 PM – 6:00 PM",
             title: "Biking Around Angkor Wat",
             description:
               "Explore the Angkor Wat area by bike after visiting the 7 Makara Road corridor.",
@@ -203,17 +203,17 @@ export default function BusinessReport() {
         ],
       },
       {
-        date: "Sunday, 16 February 2025",
+        date: "Monday, 17 February 2025",
         events: [
           {
-            time: "8:00 AM",
+            time: "8:00 AM – 9:00 AM",
             title: "Street Breakfast",
             description: "Enjoying kuy teav and coffee.",
             image: "/siemreap/breakfast-out.png",
             imageAlt: "Street-side breakfast with kuy teav and coffee",
           },
           {
-            time: "7:300 AM",
+            time: "9:30 AM – 12:00 PM",
             title: "Site Visit to Angkor Night Market Street",
             description:
               "Visit the site to explore shops and entertainment spots, check foot traffic, and assess tech use like mobile payments, Wi-Fi, and digital ads.",
@@ -221,7 +221,7 @@ export default function BusinessReport() {
             imageAlt: "Walking survey",
           },
           {
-            time: "12:30 PM",
+            time: "12:30 PM – 1:30 PM",
             title: "Lunch at Srah Srang",
             description:
               "Take a break and enjoy lunch while admiring the natural scenery of Srah Srang.",
@@ -229,7 +229,7 @@ export default function BusinessReport() {
             imageAlt: "Lunch at Srah Srang",
           },
           {
-            time: "2:00 PM",
+            time: "2:00 PM – 4:00 PM",
             title: " Summary Session at Brown Coffee Shop",
             description:
               "Summary all observations and data from the trip. Prioritize locations based on infrastructure, commercial activity, accessibility, and tech adoption readiness. Draft the report",
@@ -247,17 +247,17 @@ export default function BusinessReport() {
         ],
       },
       {
-        date: "Sunday, 16 February 2025",
+        date: "Tuesday, 18 February 2025",
         events: [
           {
-            time: "8:00 AM",
+            time: "6:00 AM – 7:00 AM",
             title: "Breakfast at the Hotel",
             description: "Blend of international and local dishes",
             image: "/siemreap/break2.png",
             imageAlt: "Hotel breakfast buffet",
           },
           {
-            time: "7:30 AM",
+            time: "7:30 AM – 11:30 AM",
             title: "Site Visit – Angkor Wat Complex",
             description:
               "The team will spend the morning visiting Angkor Wat, one of Cambodia’s most iconic cultural heritage sites.",
@@ -265,7 +265,7 @@ export default function BusinessReport() {
             imageAlt: "Angkor Wat Complex",
           },
           {
-            time: "12:30 PM",
+            time: "12:30 PM – 1:00 PM",
             title: "Lunch at Bakong Restaurant and Cafe Siem Reap",
             description:
               "Enjoy a traditional Khmer meal with a modern twist at Bakong Restaurant and Cafe.",
