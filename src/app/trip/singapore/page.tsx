@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import React, { useState } from "react";
@@ -270,7 +271,7 @@ export default function BusinessReport() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main className="pt-20">
+      <main className="pt-30">
         <motion.div
           initial="initial"
           animate="animate"
