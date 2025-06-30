@@ -57,7 +57,7 @@ export default function Header() {
         style={{
           width: "fit-content",
           borderRadius: "50px",
-          padding: "20px 40px",
+          padding: "15px 40px",
         }}
       >
         <div className="flex items-center space-x-8">
