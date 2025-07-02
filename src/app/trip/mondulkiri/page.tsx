@@ -1,22 +1,22 @@
 'use client';
 import React, { useState } from 'react';
 import {
-  Award,
   Calendar,
-  Camera,
-  CheckCircle,
   DollarSign,
-  GraduationCap,
   MapPin,
+  Users,
+  CheckCircle,
+  Target,
+  Users2,
+  GraduationCap,
   Presentation,
   Quote,
-  Target,
-  Users,
-  Users2,
+  Award,
+  Camera,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import ExpensesTable from '@/components/ExpensesTable';
 import Timeline from '@/components/TripTimeline';
+import ExpensesTable from '@/components/ExpensesTable';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -36,289 +36,234 @@ export default function BusinessReport() {
   const [activeDay, setActiveDay] = useState(1);
 
   const tripData = {
-    title: 'Business Trip to Siem Reap',
-    subtitle: 'Expansion Site Scouting for Future Development',
+    title: 'Business Trip to Mondulkiri',
+    subtitle: 'Interview with Retired Staff for Company Magazine Feature',
     description:
-      'A five-day business delegation will travel to Siem Reap from 15–19 February 2025 to evaluate potential locations for the expansion of our company. The mission is to analyze strategic areas based on foot traffic, infrastructure, accessibility, surrounding commercial activity, and potential for expansion of the company',
+      'A three day business trip to Mondulkiri was made to interview Mr. Samnang Sakal, a retired Tech Lead of Six Synergy, at his home in Sen Monorom. With 12 years of service, Mr. Sakal played a critical role in the company’s success. The interview, which will be featured in the company’s official magazine, aims to honor his contributions and preserve his legacy. It will cover his background, career journey, experiences at the company, and advice for future generations.',
     objectives: [
-      'Evaluate potential locations for company expansion in Siem Reap',
-      'Analyze strategic areas based on foot traffic and infrastructure',
-      'Assess commercial properties for lease or purchase opportunities',
-      'Engage with local stakeholders and community leaders',
-      'Survey accessibility and brand visibility potential across five key zones',
+      'Conduct comprehensive interview with Mr. Sakal',
+      'Gather career insights and company history',
+      'Capture commemorative photography',
+      'Document experiences for magazine feature',
     ],
     keyInsights: [
-      'Wat Bo Road and 7 Makara Road identified as most promising sites for office/service hub establishment',
-      'Pub Street and Angkor Night Market areas offer excellent opportunities for tech solution deployment',
-      'Local business environment shows strong infrastructure readiness and vibrant commercial community',
-      'Tourism-related businesses present significant potential for vendor support services',
-      'Field research provides actionable recommendations for site negotiations and market entry strategy',
+      'Valuable perspectives on company culture evolution',
+      'Important lessons for new employee development',
+      'Rich historical context of organizational growth',
     ],
     stats: [
       {
-        icon: <Calendar className='h-4 w-4 text-gray-600' />,
-        label: 'Duration',
-        value: '5 Days',
+        icon: <Calendar className='h-6 w-6 text-blue-600' />,
+        label: 'Trip Duration',
+        value: '3 Days',
+        subtitle: 'March 14-16, 2025',
+        bgColor: 'bg-blue-50',
       },
       {
-        icon: <MapPin className='h-4 w-4 text-gray-600' />,
-        label: 'Location',
-        value: 'Siem Reap',
+        icon: <MapPin className='h-6 w-6 text-green-600' />,
+        label: 'Destination',
+        value: 'Mondulkiri',
+        subtitle: 'Krong Saen Monourom',
+        bgColor: 'bg-green-50',
       },
       {
-        icon: <Users className='h-4 w-4 text-gray-600' />,
+        icon: <Users className='h-6 w-6 text-purple-600' />,
         label: 'Team Size',
-        value: '3 Members',
+        value: '5 Member',
+        subtitle: 'Team Mission',
+        bgColor: 'bg-purple-50',
       },
       {
-        icon: <DollarSign className='h-4 w-4 text-gray-600' />,
-        label: 'Total Cost',
-        value: '$948',
+        icon: <DollarSign className='h-6 w-6 text-orange-600' />,
+        label: 'Investment',
+        value: '$5,138',
+        subtitle: 'Total Cost',
+        bgColor: 'bg-orange-50',
       },
     ],
     days: [
       {
-        date: 'Friday, 14 February 2025',
+        date: 'Friday, 14 March 2025',
         events: [
           {
-            time: '6:00 AM',
-            title: 'Departure from Phnom Penh',
-            description: 'Departure from Phnom Penh by Larryta bus',
-            image: '/siemreap/lary.png',
-            imageAlt: 'Larryta Bus',
-          },
-          {
-            time: '1:30 PM - 2:30 PM',
-            title: 'Arrival in Siem Reap',
-            description: 'Arrival in Siem Reap and check-in at Bopha Wat Bo Residence',
-            image: '/siemreap/wat-bo-res.png',
-            imageAlt: 'Bopha Wat Bo Residence',
-          },
-          {
-            time: '3:00 PM – 5:00 PM',
-            title: 'Briefing session at the cafe.',
-            description: 'A briefing session to discuss the trip objectives and review the scheduled site visits.',
-            image: '/siemreap/meeting.png',
-            imageAlt: 'Hotel Meeting Room',
-          },
-          {
-            time: '7:00 PM',
-            title: 'Dinner',
-            description: 'Welcome Dinner at Chanrey Tree Restaurant, Riverside',
-            image: '/siemreap/dinner-1.png',
-            imageAlt: 'Chanrey Tree Restaurant',
-          },
-        ],
-      },
-      {
-        date: 'Saturday, 15 February 2025',
-        events: [
-          {
-            time: '8:00 AM – 9:00 AM',
-            title: 'Breakfast at the Hotel',
-            description: 'Blend of international and local dishes',
-            image: '/siemreap/breakfast-1.png',
-            imageAlt: 'Hotel breakfast buffet',
-          },
-          {
-            time: '9:30 AM – 12:00 PM',
-            title: 'Site visit at Pub Street and Old Market',
-            description:
-              'Inspect commercial properties for lease or purchase, assessing infrastructure, accessibility, and nearby businesses.',
-            image: '/siemreap/old-market.png',
-            imageAlt: 'Site visit',
-          },
-          {
-            time: '12:30 PM – 1:30 PM',
-            title: 'Lunch at Malis Restaurant',
-            description: 'Traditional Khmer cuisine with a modern twist',
-            image: '/siemreap/malis.png',
-            imageAlt: 'Malis Restaurant',
-          },
-          {
-            time: '2:00 PM – 4:00 PM',
-            title: 'Interview with nearby business owners and vendors',
-            description: 'Gather insights on local market conditions and business climate.',
-            image: '/siemreap/interview-1.png',
-            imageAlt: 'Airport departure gate',
-          },
-          {
-            time: '4:30 PM – 6:00 PM',
-            title: 'Team debrief and note consolidation',
-            description: 'Review findings and prepare for next day’s visits',
-            image: '/siemreap/team-met-1.png',
-            imageAlt: 'Team debrief session',
-          },
-          {
-            time: '7:00 PM',
-            title: ' Dinner at The Cuisine Wat Damnak',
-            description: 'Experience fine dining with a focus on local ingredients.',
-            image: '/siemreap/wat-domnak.png',
-            imageAlt: 'Cuisine Wat Damnak',
-          },
-        ],
-      },
-      {
-        date: 'Sunday, 16 February 2025',
-        events: [
-          {
-            time: '8:00 AM – 9:00 AM',
-            title: 'Breakfast at the Hotel',
-            description: 'Blend of international and local dishes',
-            image: '/siemreap/break-2.png',
-            imageAlt: 'Hotel breakfast buffet',
-          },
-          {
-            time: '9:30 AM – 12:00 PM',
-            title: 'Survey of Wat Bo Road area',
-            description:
-              'Inspect commercial properties for lease or purchase, assessing infrastructure, accessibility, and nearby businesses.',
-            image: '/siemreap/wat-bo.png',
-            imageAlt: 'Walking survey',
-          },
-          {
-            time: '12:30 PM – 1:30 PM',
-            title: 'Lunch at The Bean Embassy Roastery & Specialty Coffee',
-            description: 'Specialty coffee and light bites',
-            image: '/siemreap/coffee-bean.png',
-            imageAlt: 'The Bean Embassy Roastery & Specialty Coffee',
-          },
-          {
-            time: '2:00 PM – 4:00 PM ',
-            title: 'Exploration of 7 Makara Road corridor',
-            description: 'Assess commercial properties and surrounding infrastructure.',
-            image: '/siemreap/wat-bo-2.png',
-            imageAlt: 'Airport departure gate',
-          },
-          {
-            time: '4:30 PM – 6:00 PM',
-            title: 'Biking Around Angkor Wat',
-            description: 'Explore the Angkor Wat area by bike after visiting the 7 Makara Road corridor.',
-            image: '/siemreap/met-3.png',
-            imageAlt: 'Team debrief session',
-          },
-          {
-            time: '7:00 PM',
-            title: "Dinner at Embassy Restaurant, King's Road",
-            description: 'Experience modern Khmer cuisine in a vibrant setting.',
-            image: '/siemreap/emba-res.png',
-            imageAlt: 'Embassy Restaurant',
-          },
-        ],
-      },
-      {
-        date: 'Monday, 17 February 2025',
-        events: [
-          {
-            time: '8:00 AM – 9:00 AM',
-            title: 'Street Breakfast',
-            description: 'Enjoying kuy teav and coffee.',
-            image: '/siemreap/breakfast-out.png',
-            imageAlt: 'Street-side breakfast with kuy teav and coffee',
-          },
-          {
-            time: '9:30 AM – 12:00 PM',
-            title: 'Site Visit to Angkor Night Market Street',
-            description:
-              'Visit the site to explore shops and entertainment spots, check foot traffic, and assess tech use like mobile payments, Wi-Fi, and digital ads.',
-            image: '/siemreap/nigth-3.png',
-            imageAlt: 'Walking survey',
-          },
-          {
-            time: '12:30 PM – 1:30 PM',
-            title: 'Lunch at Srah Srang',
-            description: 'Take a break and enjoy lunch while admiring the natural scenery of Srah Srang.',
-            image: '/siemreap/sras.png',
-            imageAlt: 'Lunch at Srah Srang',
-          },
-          {
-            time: '2:00 PM – 4:00 PM',
-            title: ' Summary Session at Brown Coffee Shop',
-            description:
-              'Summary all observations and data from the trip. Prioritize locations based on infrastructure, commercial activity, accessibility, and tech adoption readiness. Draft the report',
-            image: '/siemreap/brown.png',
-            imageAlt: 'Brown Coffee Shop',
-          },
-          {
-            time: '7:00 PM',
-            title: 'Dinner at Tonle Sap restaurant',
-            description: 'Experience modern Khmer cuisine in a vibrant setting.',
-            image: '/siemreap/tonel.png',
-            imageAlt: 'Tonle Sap Restaurant',
-          },
-        ],
-      },
-      {
-        date: 'Tuesday, 18 February 2025',
-        events: [
-          {
-            time: '6:00 AM – 7:00 AM',
-            title: 'Breakfast at the Hotel',
-            description: 'Blend of international and local dishes',
-            image: '/siemreap/break2.png',
-            imageAlt: 'Hotel breakfast buffet',
-          },
-          {
-            time: '7:30 AM – 11:30 AM',
-            title: 'Site Visit – Angkor Wat Complex',
-            description:
-              'The team will spend the morning visiting Angkor Wat, one of Cambodia’s most iconic cultural heritage sites.',
-            image: '/siemreap/angkorwat-2.png',
-            imageAlt: 'Angkor Wat Complex',
-          },
-          {
-            time: '12:30 PM – 1:00 PM',
-            title: 'Lunch at Bakong Restaurant and Cafe Siem Reap',
-            description: 'Enjoy a traditional Khmer meal with a modern twist at Bakong Restaurant and Cafe.',
-            image: '/siemreap/bakong.png',
-            imageAlt: 'Lunch at Bakong Restaurant and Cafe Siem Reap',
+            time: '7:00 AM – 1:40 PM',
+            title: 'Departure to Sen Monorom',
+            description: 'Travel from Phnom Penh to Saen Monourom, Mondulkiri',
+            image: '/mondul.jpg',
+            imageAlt: 'Highway departure from Phnom Penh',
           },
           {
             time: '2:00 PM',
-            title: 'Departure from Siem Reap to Phnom Penh via Larryta Bus',
-            description: 'The team will depart from Siem Reap to Phnom Penh via Larryta bus, concluding the trip.',
-            image: '/siemreap/lary2.png',
-            imageAlt: 'Departure from Siem Reap',
+            title: 'Check-in at Nature Lodge Resort',
+            description: 'Accommodation setup for the trip duration',
+            image:
+              'https://cf.bstatic.com/xdata/images/hotel/max1024x768/364235424.jpg?k=7bd2407f45dbb65c8a0fc2ca89ddcb1e48f8f384caf738337f9c822c60597ee5&o=&hp=1',
+            imageAlt: 'Nature lodge accommodation',
           },
           {
-            time: '7:30 PM',
-            title: 'Arrival in Phnom Penh',
-            description: 'The team arrives back in Phnom Penh.',
-            image: '/siemreap/pp.png',
-            imageAlt: 'Arrival in Phnom Penh',
+            time: '2:30 PM – 3:30 PM',
+            title: 'Visit Local Market',
+            description: 'Shopping for raw ingredients and meat',
+            image:
+              'https://images.squarespace-cdn.com/content/v1/54930d4ae4b018401d7b66f4/1472812922745-27WTGWFH06K29V5P3AMG/image-asset.jpeg',
+            imageAlt: 'Local market shopping',
+          },
+          {
+            time: '4:00 PM',
+            title: 'Visit Mr. Sakal Residence',
+            description: 'Catch up, get familiar, and give a welcome gift',
+            image:
+              'https://media.licdn.com/dms/image/v2/D5603AQHISqf9I0mBQQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696408919434?e=1756944000&v=beta&t=Z0x-2RvixLwMiiYBpYP9a0t9yNgYTT8Qnh8ehZWGNU0',
+            imageAlt: 'Business meeting in rural setting',
+          },
+          {
+            time: '6:00 PM',
+            title: 'Cook and Eat Dinner at Mr. Sakal',
+            description: 'Help prepare and enjoy dinner together',
+            image:
+              'https://cf.bstatic.com/xdata/images/hotel/max1024x768/179089783.jpg?k=3e50a65f0083d7a6d15e9e600272dce50152ab7503f6e5b251aacfb88438a47e&o=&hp=1',
+            imageAlt: 'Traditional Cambodian dinner',
+          },
+          {
+            time: '8:00 PM',
+            title: 'Return to Resort',
+            description: 'Wrap up the day and rest',
+            image: 'https://apenoni.com/wp-content/uploads/2016/05/nature-lodge-mondulkiri-collage-1024x512.jpg',
+            imageAlt: 'Returning to resort at night',
+          },
+        ],
+      },
+      {
+        date: 'Saturday, 15 March 2025',
+        events: [
+          {
+            time: '8:00 AM – 9:00 AM',
+            title: 'Breakfast at Resort',
+            description: 'Morning meal before the interview day',
+            image:
+              'https://cf.bstatic.com/xdata/images/hotel/max1024x768/216631567.jpg?k=590ab8072acfcce28002abe4f309ab91dca9354e7264ba04ab7eb1044b0609f9&o=&hp=1',
+            imageAlt: 'Breakfast at resort',
+          },
+          {
+            time: '9:00 AM – 9:30 AM',
+            title: 'Arrival and Preparation',
+            description: 'Setup for interview at Mr. Sakal residence',
+            image:
+              'https://q-xx.bstatic.com/xdata/images/hotel/max500/343007145.jpg?k=d53ec5ac854bc7b644a4a7bb580c4326cba6cf2a35d8376ab518d2512ce3251b&o=',
+            imageAlt: 'Village home setup',
+          },
+          {
+            time: '9:30 AM – 12:00 PM',
+            title: 'Morning Interview Session',
+            description: 'Career stories and contributions',
+            image: 'https://tpe.madmagz.news/wp-content/uploads/sites/4/2016/10/Interview_valeur-ajout%C3%A9e-TPE-745x500.png',
+            imageAlt: 'Morning interview session',
+          },
+          {
+            time: '12:00 PM',
+            title: 'Lunch Break',
+            description: 'Midday meal and rest',
+            image:
+              'https://autourasia.com/uploads/Travel-Guide-Cambodia/mondulkiri/Top-6-must-try-specialties-in-Mondulkiri/900-chapeau-dish-mondulkiri-(1).jpg',
+            imageAlt: 'Local lunch setting',
+          },
+          {
+            time: '1:30 PM – 4:30 PM',
+            title: 'Afternoon Interview Session',
+            description: 'Focus on wisdom and advice for new employees',
+            image: 'https://i.pinimg.com/474x/2e/f8/ee/2ef8ee4f963dae1030ea08bb952e9788.jpg',
+            imageAlt: 'Afternoon documentation',
+          },
+          {
+            time: '5:00 PM',
+            title: 'Dinner and Celebration',
+            description: 'Evening meal at Mr. Sakal home',
+            image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop',
+            imageAlt: 'Evening gathering',
+          },
+          {
+            time: '10:00 PM',
+            title: 'Return to Resort',
+            description: 'End of the second day',
+            image:
+              'https://q-xx.bstatic.com/xdata/images/hotel/max500/364235396.jpg?k=aaea90c8caf0dfd3a5ec4856db33a831ec54f4e94ece996049d2614bc46b9a49&o=',
+            imageAlt: 'Night return to lodge',
+          },
+        ],
+      },
+      {
+        date: 'Sunday, 16 March 2025',
+        events: [
+          {
+            time: '8:00 AM – 9:00 AM',
+            title: 'Breakfast at Resort',
+            description: 'Start the final day with breakfast',
+            image: 'https://impresstravel.com/wp-content/uploads/2025/05/Mekong-Lodge-Resort-Review-Best-for-Nature-Lovers-4.jpg',
+            imageAlt: 'Breakfast view',
+          },
+          {
+            time: '9:00 AM',
+            title: 'Arrival and Setup at Residence',
+            description: 'Prepare for final photoshoot',
+            image:
+              'https://media.istockphoto.com/id/1093914934/photo/empty-studio-with-photography-lighting.jpg?s=612x612&w=0&k=20&c=WI0OApbMzeRviRwFR9tISanskRu_TEFxA8ztYZERsVA=',
+            imageAlt: 'Residence preparation',
+          },
+          {
+            time: '9:20 AM – 12:00 PM',
+            title: 'Photoshoot Session',
+            description: 'Taking commemorative photos with Mr. Sakal',
+            image: '/sakal.jpg',
+            imageAlt: 'Photoshoot moment',
+          },
+          {
+            time: '1:00 PM – 2:00 PM',
+            title: 'Final Lunch & Farewell',
+            description: 'Lunch and farewell party at The Living Room Mondulkiri',
+            image: 'https://images-cdn.ubuy.co.id/634e46899a4aa1331627b480-we-will-miss-you-party-decorations-set.jpg',
+            imageAlt: 'Farewell lunch',
+          },
+          {
+            time: '3:00 PM – 9:40 PM',
+            title: 'Return Journey',
+            description: 'Depart from Mondulkiri and arrive in Phnom Penh',
+            image: '/return.jpg',
+            imageAlt: 'Return trip to Phnom Penh',
           },
         ],
       },
     ],
+
     expenses: [
       {
-        category: 'Laryta Bus (Round Trip)',
-        details: 'Phnom Penh → Siem Reap → Phnom Penh (3 members)',
-        cost: '$78',
+        category: 'Transportation',
+        details: 'Round-trip travel ( company van & fuel )',
+        cost: '$100',
       },
       {
         category: 'Accommodation',
-        details: '4 nights at Bopha Wat Bo Residence',
-        cost: '$160',
+        details: 'Two nights at Nature Lodge Resort',
+        cost: '$120',
       },
       {
         category: 'Meals',
-        details: 'Breakfast, coffee, lunch, dinner',
-        cost: '$480',
-      },
-      {
-        category: 'Local Transportation',
-        details: 'Motorbike rental for 4 days, TukTuk and Grab',
+        details: 'Food expenses over three days',
         cost: '$200',
       },
       {
-        category: 'Extracurricular',
-        details: 'Visit Angkor Wat',
-        cost: '$30',
+        category: 'Miscellaneous',
+        details: `Gifts for interviewee expenses - 
+        IPAD PRO 13" : $1,399,
+        MACBOOK PR0 M4: $2000,
+        Apple Pencil Pro: $120,
+        Iphone 16 Pro Max : $1,199`,
+        cost: '$4,718',
       },
     ],
     conclusion:
-      'The five-day business trip to Siem Reap has been highly productive in identifying prime locations for our company’s expansion. Through extensive site visits to high-traffic commercial areas such as Pub Street, Old Market, Wat Bo Road, 7 Makara Road, and Angkor Night Market Street, the team gained critical insights into the local business environment, infrastructure readiness, and potential client engagement. Wat Bo Road and 7 Makara Road emerged as the most promising sites for establishing an office or service hub due to their accessibility, infrastructure quality, and vibrant business community. Meanwhile, the Pub Street and Angkor Night Market areas offer excellent opportunities for deploying tech solutions that support local vendors and tourism-related businesses. This field research equips our company with strategic direction and actionable recommendations to proceed with site negotiations, technology deployment, and market entry plans in Siem Reap. The delegation returns motivated and confident in the potential for sustainable growth in this dynamic city.',
+      'The trip to Mondulkiri was meaningful and completed with success. The primary objective interviewing Mr. Samnang Sakal, a respected former Tech Lead of Six Synergy was filled with all the important information about his career, personal journey, and valuable advice for the next generation. Beyond the formal interview, the experience allowed for genuine connection, shared meals, and a heartfelt farewell.',
+    conclusion_2:
+      'This trip not only honored Mr. Sakal contributions with a dedicated magazine feature and thoughtful gifts but also captured his legacy through photos and stories that will inspire others within the company. The overall atmosphere was respectful, celebratory, and deeply appreciative, making the trip both professionally and personally fulfilling.',
   };
 
   return (
@@ -370,7 +315,7 @@ export default function BusinessReport() {
               transition={{ duration: 0.6 }}
               className='w-full max-w-7xl mx-auto mb-12 rounded-2xl overflow-hidden group cursor-pointer shadow-2xl'>
               <img
-                src='/siemreap/angkor.png'
+                src='https://www.asiakingtravel.com/cuploads/files/Mondulkiri-2.jpg'
                 alt='Mondulkiri Province landscape'
                 className='w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105'
               />
@@ -479,7 +424,7 @@ export default function BusinessReport() {
         <Timeline days={tripData.days} activeDay={activeDay} setActiveDay={setActiveDay} />
 
         {/* Expenses Section */}
-        <ExpensesTable expenses={tripData.expenses} totalCost='$948' />
+        <ExpensesTable expenses={tripData.expenses} totalCost='$5,138' />
 
         {/* Enhanced Conclusion */}
         <motion.section
@@ -508,6 +453,16 @@ export default function BusinessReport() {
                 className='space-y-4'>
                 <h3 className='text-xl font-semibold text-gray-900 mb-4'>Project Summary</h3>
                 <p className='text-gray-700 leading-relaxed text-base'>{tripData.conclusion}</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className='space-y-4'>
+                <h3 className='text-xl font-semibold text-gray-900 mb-4'>Impact & Value</h3>
+                <p className='text-gray-700 leading-relaxed text-base'>{tripData.conclusion_2}</p>
               </motion.div>
             </div>
 
