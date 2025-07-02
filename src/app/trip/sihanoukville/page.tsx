@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
+
 import React, { useState } from 'react';
 import {
   Award,
@@ -14,9 +16,10 @@ import {
   Users,
   Users2,
 } from 'lucide-react';
+
 import { motion } from 'framer-motion';
-import ExpensesTable from '@/components/ExpensesTable';
 import Timeline from '@/components/TripTimeline';
+import ExpensesTable from '@/components/ExpensesTable';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -36,34 +39,34 @@ export default function BusinessReport() {
   const [activeDay, setActiveDay] = useState(1);
 
   const tripData = {
-    title: 'Business Trip to Siem Reap',
-    subtitle: 'Expansion Site Scouting for Future Development',
+    title: 'Business Trip to Sihanoukville',
+    subtitle: 'Meetings with Potential Investors at Two Locations',
     description:
-      'A five-day business delegation will travel to Siem Reap from 15–19 February 2025 to evaluate potential locations for the expansion of our company. The mission is to analyze strategic areas based on foot traffic, infrastructure, accessibility, surrounding commercial activity, and potential for expansion of the company',
+      'From 21 to 22 July 2025, a three-member delegation traveled to Sihanoukville to engage with potential investors and explore two development zones for a future coastal eco-tourism and smart infrastructure project. The goal of the trip was to introduce the investment proposal, build relationships, and assess the site feasibility.',
     objectives: [
-      'Evaluate potential locations for company expansion in Siem Reap',
-      'Analyze strategic areas based on foot traffic and infrastructure',
-      'Assess commercial properties for lease or purchase opportunities',
-      'Engage with local stakeholders and community leaders',
-      'Survey accessibility and brand visibility potential across five key zones',
+      'Engage with potential investors for coastal eco-tourism and smart infrastructure project',
+      'Present investment proposal and build strategic relationships',
+      'Assess site feasibility across two development zones',
+      'Evaluate infrastructure and logistics capabilities at Sihanoukville Autonomous Port',
+      'Explore partnership opportunities for sustainable development collaboration',
     ],
     keyInsights: [
-      'Wat Bo Road and 7 Makara Road identified as most promising sites for office/service hub establishment',
-      'Pub Street and Angkor Night Market areas offer excellent opportunities for tech solution deployment',
-      'Local business environment shows strong infrastructure readiness and vibrant commercial community',
-      'Tourism-related businesses present significant potential for vendor support services',
-      'Field research provides actionable recommendations for site negotiations and market entry strategy',
+      'Both potential investors showed strong interest in partnership opportunities',
+      'Otres Beach and Ream Beach development zones demonstrate significant growth potential',
+      'Infrastructure assessment reveals development-ready plots with good accessibility',
+      'Port logistics capabilities support project execution requirements',
+      'Positive investor feedback establishes foundation for future capital acquisition in coastal growth corridor',
     ],
     stats: [
       {
         icon: <Calendar className='h-4 w-4 text-gray-600' />,
         label: 'Duration',
-        value: '5 Days',
+        value: '2 Days',
       },
       {
         icon: <MapPin className='h-4 w-4 text-gray-600' />,
         label: 'Location',
-        value: 'Siem Reap',
+        value: 'Sihanoukville',
       },
       {
         icon: <Users className='h-4 w-4 text-gray-600' />,
@@ -73,252 +76,183 @@ export default function BusinessReport() {
       {
         icon: <DollarSign className='h-4 w-4 text-gray-600' />,
         label: 'Total Cost',
-        value: '$948',
+        value: '$735',
       },
     ],
     days: [
       {
-        date: 'Friday, 14 February 2025',
+        date: 'Monday, 21 July 2025',
         events: [
           {
-            time: '6:00 AM',
+            time: '7:00 AM',
             title: 'Departure from Phnom Penh',
-            description: 'Departure from Phnom Penh by Larryta bus',
-            image: '/siemreap/lary.png',
-            imageAlt: 'Larryta Bus',
+            description: 'Travel via P-SHV Expressway (PPSHV) to Sihanoukville',
+            image: 'https://www.khmertimeskh.com/wp-content/uploads/2022/11/fz2bhsuv.jpg',
+            imageAlt: 'Departure via PPSHV Expressway',
           },
           {
-            time: '1:30 PM - 2:30 PM',
-            title: 'Arrival in Siem Reap',
-            description: 'Arrival in Siem Reap and check-in at Bopha Wat Bo Residence',
-            image: '/siemreap/wat-bo-res.png',
-            imageAlt: 'Bopha Wat Bo Residence',
+            time: '9:00 AM',
+            title: 'Arrival in Sihanoukville',
+            description: 'Reached coastal destination after 2-hour journey',
+            image:
+              'https://server.ourglobaltrek.com/wp-content/uploads/2014/12/chairs-on-the-sand-at-serendipity-beach-in-sihanoukville.jpg',
+            imageAlt: 'Sihanoukville coastal arrival',
           },
           {
-            time: '3:00 PM – 5:00 PM',
-            title: 'Briefing session at the cafe.',
-            description: 'A briefing session to discuss the trip objectives and review the scheduled site visits.',
-            image: '/siemreap/meeting.png',
-            imageAlt: 'Hotel Meeting Room',
-          },
-          {
-            time: '7:00 PM',
-            title: 'Dinner',
-            description: 'Welcome Dinner at Chanrey Tree Restaurant, Riverside',
-            image: '/siemreap/dinner-1.png',
-            imageAlt: 'Chanrey Tree Restaurant',
-          },
-        ],
-      },
-      {
-        date: 'Saturday, 15 February 2025',
-        events: [
-          {
-            time: '8:00 AM – 9:00 AM',
-            title: 'Breakfast at the Hotel',
-            description: 'Blend of international and local dishes',
-            image: '/siemreap/breakfast-1.png',
-            imageAlt: 'Hotel breakfast buffet',
-          },
-          {
-            time: '9:30 AM – 12:00 PM',
-            title: 'Site visit at Pub Street and Old Market',
+            time: '10:00 AM',
+            title: 'Meeting with Investor #1',
             description:
-              'Inspect commercial properties for lease or purchase, assessing infrastructure, accessibility, and nearby businesses.',
-            image: '/siemreap/old-market.png',
-            imageAlt: 'Site visit',
+              'Smart property project presentation and investment pitch at Novotel Sihanoukville Hotel (10:00 AM - 12:00 PM)',
+            image: 'https://www.novotelsihanoukville.com/wp-content/uploads/sites/78/2024/02/Building-Sea-View-scaled.jpg',
+            imageAlt: 'Business meeting presentation at hotel',
           },
           {
-            time: '12:30 PM – 1:30 PM',
-            title: 'Lunch at Malis Restaurant',
-            description: 'Traditional Khmer cuisine with a modern twist',
-            image: '/siemreap/malis.png',
-            imageAlt: 'Malis Restaurant',
-          },
-          {
-            time: '2:00 PM – 4:00 PM',
-            title: 'Interview with nearby business owners and vendors',
-            description: 'Gather insights on local market conditions and business climate.',
-            image: '/siemreap/interview-1.png',
-            imageAlt: 'Airport departure gate',
-          },
-          {
-            time: '4:30 PM – 6:00 PM',
-            title: 'Team debrief and note consolidation',
-            description: 'Review findings and prepare for next day’s visits',
-            image: '/siemreap/team-met-1.png',
-            imageAlt: 'Team debrief session',
-          },
-          {
-            time: '7:00 PM',
-            title: ' Dinner at The Cuisine Wat Damnak',
-            description: 'Experience fine dining with a focus on local ingredients.',
-            image: '/siemreap/wat-domnak.png',
-            imageAlt: 'Cuisine Wat Damnak',
-          },
-        ],
-      },
-      {
-        date: 'Sunday, 16 February 2025',
-        events: [
-          {
-            time: '8:00 AM – 9:00 AM',
-            title: 'Breakfast at the Hotel',
-            description: 'Blend of international and local dishes',
-            image: '/siemreap/break-2.png',
-            imageAlt: 'Hotel breakfast buffet',
-          },
-          {
-            time: '9:30 AM – 12:00 PM',
-            title: 'Survey of Wat Bo Road area',
-            description:
-              'Inspect commercial properties for lease or purchase, assessing infrastructure, accessibility, and nearby businesses.',
-            image: '/siemreap/wat-bo.png',
-            imageAlt: 'Walking survey',
-          },
-          {
-            time: '12:30 PM – 1:30 PM',
-            title: 'Lunch at The Bean Embassy Roastery & Specialty Coffee',
-            description: 'Specialty coffee and light bites',
-            image: '/siemreap/coffee-bean.png',
-            imageAlt: 'The Bean Embassy Roastery & Specialty Coffee',
-          },
-          {
-            time: '2:00 PM – 4:00 PM ',
-            title: 'Exploration of 7 Makara Road corridor',
-            description: 'Assess commercial properties and surrounding infrastructure.',
-            image: '/siemreap/wat-bo-2.png',
-            imageAlt: 'Airport departure gate',
-          },
-          {
-            time: '4:30 PM – 6:00 PM',
-            title: 'Biking Around Angkor Wat',
-            description: 'Explore the Angkor Wat area by bike after visiting the 7 Makara Road corridor.',
-            image: '/siemreap/met-3.png',
-            imageAlt: 'Team debrief session',
-          },
-          {
-            time: '7:00 PM',
-            title: "Dinner at Embassy Restaurant, King's Road",
-            description: 'Experience modern Khmer cuisine in a vibrant setting.',
-            image: '/siemreap/emba-res.png',
-            imageAlt: 'Embassy Restaurant',
-          },
-        ],
-      },
-      {
-        date: 'Monday, 17 February 2025',
-        events: [
-          {
-            time: '8:00 AM – 9:00 AM',
-            title: 'Street Breakfast',
-            description: 'Enjoying kuy teav and coffee.',
-            image: '/siemreap/breakfast-out.png',
-            imageAlt: 'Street-side breakfast with kuy teav and coffee',
-          },
-          {
-            time: '9:30 AM – 12:00 PM',
-            title: 'Site Visit to Angkor Night Market Street',
-            description:
-              'Visit the site to explore shops and entertainment spots, check foot traffic, and assess tech use like mobile payments, Wi-Fi, and digital ads.',
-            image: '/siemreap/nigth-3.png',
-            imageAlt: 'Walking survey',
-          },
-          {
-            time: '12:30 PM – 1:30 PM',
-            title: 'Lunch at Srah Srang',
-            description: 'Take a break and enjoy lunch while admiring the natural scenery of Srah Srang.',
-            image: '/siemreap/sras.png',
-            imageAlt: 'Lunch at Srah Srang',
-          },
-          {
-            time: '2:00 PM – 4:00 PM',
-            title: ' Summary Session at Brown Coffee Shop',
-            description:
-              'Summary all observations and data from the trip. Prioritize locations based on infrastructure, commercial activity, accessibility, and tech adoption readiness. Draft the report',
-            image: '/siemreap/brown.png',
-            imageAlt: 'Brown Coffee Shop',
-          },
-          {
-            time: '7:00 PM',
-            title: 'Dinner at Tonle Sap restaurant',
-            description: 'Experience modern Khmer cuisine in a vibrant setting.',
-            image: '/siemreap/tonel.png',
-            imageAlt: 'Tonle Sap Restaurant',
-          },
-        ],
-      },
-      {
-        date: 'Tuesday, 18 February 2025',
-        events: [
-          {
-            time: '6:00 AM – 7:00 AM',
-            title: 'Breakfast at the Hotel',
-            description: 'Blend of international and local dishes',
-            image: '/siemreap/break2.png',
-            imageAlt: 'Hotel breakfast buffet',
-          },
-          {
-            time: '7:30 AM – 11:30 AM',
-            title: 'Site Visit – Angkor Wat Complex',
-            description:
-              'The team will spend the morning visiting Angkor Wat, one of Cambodia’s most iconic cultural heritage sites.',
-            image: '/siemreap/angkorwat-2.png',
-            imageAlt: 'Angkor Wat Complex',
-          },
-          {
-            time: '12:30 PM – 1:00 PM',
-            title: 'Lunch at Bakong Restaurant and Cafe Siem Reap',
-            description: 'Enjoy a traditional Khmer meal with a modern twist at Bakong Restaurant and Cafe.',
-            image: '/siemreap/bakong.png',
-            imageAlt: 'Lunch at Bakong Restaurant and Cafe Siem Reap',
+            time: '12:00 PM',
+            title: 'Lunch with Investor and Team',
+            description: 'Networking meal at local seafood restaurant (12:00 PM - 1:30 PM)',
+            image:
+              'https://autourasia.com/uploads/Travel-Guide-Cambodia/sihanoukville/specialties-sihanoukville/1-que-manger-a-sihanoukville-top-06-meilleurs-specialites-a-sihanoukville.jpg',
+            imageAlt: 'Seafood lunch business meeting',
           },
           {
             time: '2:00 PM',
-            title: 'Departure from Siem Reap to Phnom Penh via Larryta Bus',
-            description: 'The team will depart from Siem Reap to Phnom Penh via Larryta bus, concluding the trip.',
-            image: '/siemreap/lary2.png',
-            imageAlt: 'Departure from Siem Reap',
+            title: 'Check-in at Blue Bay International Hotel',
+            description: 'Accommodation setup and rest period (2:00 PM - 4:00 PM)',
+            image: 'https://media-cdn.tripadvisor.com/media/photo-s/15/9e/ac/ff/breakfast-buffet.jpg',
+            imageAlt: 'Hotel check-in at Blue Bay International',
           },
           {
-            time: '7:30 PM',
+            time: '4:00 PM',
+            title: 'Site Visit #1 - Otres Beach Development Zone',
+            description: 'Tour of zoning, accessibility, and development-ready plots (4:00 PM - 5:30 PM)',
+            image: 'https://lp-cms-production.imgix.net/2019-06/8531cb22680201872a154cee335b4040-otres-beach.jpg',
+            imageAlt: 'Otres Beach development zone inspection',
+          },
+          {
+            time: '6:00 PM',
+            title: 'Dinner with Local Business Representatives',
+            description: 'Networking dinner at The White Restaurant (6:00 PM - 7:30 PM)',
+            image:
+              'https://white-boutique.sihanoukville-hotels.com/data/Imgs/OriginalPhoto/7500/750026/750026102/img-white-boutique-hotel-sihanoukville-13.JPEG',
+            imageAlt: 'Business dinner at coastal restaurant',
+          },
+          {
+            time: '8:00 PM',
+            title: 'Return to Hotel and Team Debrief',
+            description: 'Day summary and preparation for next day (8:00 PM - 9:00 PM)',
+            image:
+              'https://cf.bstatic.com/xdata/images/hotel/max1024x768/455968344.jpg?k=3356cc9e692e63036435f1349f7e03d2b5881757be9cce0e282013e7b6e2b525&o=&hp=1',
+            imageAlt: 'Team debrief session at hotel',
+          },
+        ],
+      },
+      {
+        date: 'Tuesday, 22 July 2025',
+        events: [
+          {
+            time: '8:00 AM',
+            title: 'Breakfast at Hotel',
+            description: 'Morning meal and preparation for investor meetings',
+            image:
+              'https://howard-johnson-by-wyndham.sihanoukville-hotels.com/data/Pics/OriginalPhoto/11173/1117385/1117385682/howard-johnson-by-wyndham-sihanoukville-pic-83.JPEG',
+            imageAlt: 'Hotel breakfast preparation',
+          },
+          {
+            time: '9:00 AM',
+            title: 'Meeting with Investor #2',
+            description: 'Eco-tourism and sustainable development presentation at Sokha Beach Resort (9:00 AM - 11:00 AM)',
+            image: 'https://sokhahotels.com.kh/sihanoukville/jp/img/slideshows/meeting_events/Grand-BallroomLogo.jpg',
+            imageAlt: 'Business presentation at beach resort',
+          },
+          {
+            time: '11:30 AM',
+            title: 'Visit to Sihanoukville Autonomous Port',
+            description: 'Logistics capabilities evaluation (11:30 AM - 12:00 PM)',
+            image: 'https://pas.gov.kh/images/slideshows/13-08-2021-rand-6295383.JPG',
+            imageAlt: 'Port logistics assessment',
+          },
+          {
+            time: '12:30 PM',
+            title: 'Lunch at Ochheuteal Beach',
+            description: 'Coastal dining and team discussion (12:30 PM - 1:30 PM)',
+            image: 'https://media-cdn.tripadvisor.com/media/photo-s/0d/02/df/3f/photo0jpg.jpg',
+            imageAlt: 'Beach lunch at Ochheuteal',
+          },
+          {
+            time: '2:00 PM',
+            title: 'Site Visit #2 - Ream Beach Development Zone',
+            description: 'Commercial growth areas and infrastructure observation (2:00 PM - 3:00 PM)',
+            image: 'https://www.khmertimeskh.com/wp-content/uploads/2022/12/Bay-of-Lights-Sihanoukville-Ream-Cambodia.jpg',
+            imageAlt: 'Ream Beach development zone tour',
+          },
+          {
+            time: '3:30 PM',
+            title: 'Departure from Sihanoukville',
+            description: 'Return journey to Phnom Penh via Expressway',
+            image: 'https://b2b-cambodia.com/wp-content/uploads/2022/12/ETC-Lane-at-PPSHV-Expressway.jpg',
+            imageAlt: 'Departure from Sihanoukville',
+          },
+          {
+            time: '5:30 PM',
             title: 'Arrival in Phnom Penh',
-            description: 'The team arrives back in Phnom Penh.',
-            image: '/siemreap/pp.png',
-            imageAlt: 'Arrival in Phnom Penh',
+            description: 'End of business trip',
+            image: 'https://lostplate.com/wp-content/uploads/2020/05/Phnom-Penh-Food-Tour-Independence-Monument.jpg',
+            imageAlt: 'Evening arrival in Phnom Penh',
           },
         ],
       },
     ],
     expenses: [
       {
-        category: 'Laryta Bus (Round Trip)',
-        details: 'Phnom Penh → Siem Reap → Phnom Penh (3 members)',
-        cost: '$78',
+        category: 'Transportation',
+        details: 'Round-trip van via PPSHV Expressway',
+        cost: '$180',
       },
       {
         category: 'Accommodation',
-        details: '4 nights at Bopha Wat Bo Residence',
-        cost: '$160',
+        details: '1 night at Blue Bay International Hotel',
+        cost: '$250',
       },
       {
         category: 'Meals',
-        details: 'Breakfast, coffee, lunch, dinner',
-        cost: '$480',
+        details: 'Breakfast, lunch, dinner (2 days)',
+        cost: '$80',
       },
       {
-        category: 'Local Transportation',
-        details: 'Motorbike rental for 4 days, TukTuk and Grab',
-        cost: '$200',
+        category: 'Meeting & Venue Fees',
+        details: 'Room rental, materials, and refreshments',
+        cost: '$150',
       },
       {
-        category: 'Extracurricular',
-        details: 'Visit Angkor Wat',
-        cost: '$30',
+        category: 'Miscellaneous',
+        details: 'Snacks, tips, water',
+        cost: '$75',
       },
     ],
     conclusion:
-      'The five-day business trip to Siem Reap has been highly productive in identifying prime locations for our company’s expansion. Through extensive site visits to high-traffic commercial areas such as Pub Street, Old Market, Wat Bo Road, 7 Makara Road, and Angkor Night Market Street, the team gained critical insights into the local business environment, infrastructure readiness, and potential client engagement. Wat Bo Road and 7 Makara Road emerged as the most promising sites for establishing an office or service hub due to their accessibility, infrastructure quality, and vibrant business community. Meanwhile, the Pub Street and Angkor Night Market areas offer excellent opportunities for deploying tech solutions that support local vendors and tourism-related businesses. This field research equips our company with strategic direction and actionable recommendations to proceed with site negotiations, technology deployment, and market entry plans in Siem Reap. The delegation returns motivated and confident in the potential for sustainable growth in this dynamic city.',
+      "The two-day field mission to Sihanoukville on 21–22 July 2025 was productive and promising. Our team successfully pitched to two potential investors, both of whom showed interest in partnership opportunities. Site visits provided valuable firsthand insight into infrastructure, zoning, and potential returns. With positive investor feedback and practical exposure, this trip lays the foundation for future capital acquisition and project execution in Cambodia's coastal growth corridor.",
+    takeaways: [
+      {
+        title: 'Successful investor engagement and partnership interest',
+        description:
+          'Both potential investors at Novotel Sihanoukville Hotel and Sokha Beach Resort showed genuine interest in the smart property and eco-tourism projects, opening doors for future collaborations.',
+      },
+      {
+        title: 'Comprehensive site feasibility assessment',
+        description:
+          'Detailed evaluation of Otres Beach and Ream Beach development zones provided crucial insights into zoning regulations, accessibility, and development-ready infrastructure.',
+      },
+      {
+        title: 'Strategic coastal development opportunities identified',
+        description:
+          'The coastal location offers significant potential for eco-tourism and smart infrastructure projects, with strong logistics support from Sihanoukville Autonomous Port.',
+      },
+      {
+        title: 'Local business network expansion',
+        description:
+          'Established valuable connections with local business representatives and stakeholders, creating a foundation for future project implementation and community integration.',
+      },
+    ],
   };
 
   return (
@@ -370,7 +304,7 @@ export default function BusinessReport() {
               transition={{ duration: 0.6 }}
               className='w-full max-w-7xl mx-auto mb-12 rounded-2xl overflow-hidden group cursor-pointer shadow-2xl'>
               <img
-                src='/siemreap/angkor.png'
+                src='https://content.api.news/v3/images/bin/f1beeee564fa4ba9b3d662d94c0ed885'
                 alt='Mondulkiri Province landscape'
                 className='w-full h-64 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105'
               />
@@ -479,7 +413,7 @@ export default function BusinessReport() {
         <Timeline days={tripData.days} activeDay={activeDay} setActiveDay={setActiveDay} />
 
         {/* Expenses Section */}
-        <ExpensesTable expenses={tripData.expenses} totalCost='$948' />
+        <ExpensesTable expenses={tripData.expenses} totalCost='$735' />
 
         {/* Enhanced Conclusion */}
         <motion.section
