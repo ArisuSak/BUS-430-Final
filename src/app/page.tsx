@@ -132,7 +132,7 @@ export default function Home() {
                   <div className='w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center'>
                     {/* <span className="text-white font-semibold">MJ</span> */}
                     <Image
-                      src={'/kimleng.png'}
+                      src={'/Kimleng.png'}
                       alt='GON'
                       width={200}
                       height={200}
@@ -318,11 +318,8 @@ export default function Home() {
               <h2 className='text-4xl font-light text-gray-900'>
                 Get inspiration from
                 <br />
-                successful tech projects
+                our successful tech projects
               </h2>
-              <button className='px-6 py-3 border border-gray-300 text-gray-700 font-medium text-sm tracking-wide rounded-full hover:bg-gray-50 transition-all duration-300'>
-                See more
-              </button>
             </div>
 
             <div className='grid md:grid-cols-3 gap-8'>
@@ -404,9 +401,6 @@ export default function Home() {
                   transformation journey.
                 </p>
               </div>
-              <button className='px-6 py-3 border border-black text-black font-medium text-sm tracking-wide rounded-full hover:bg-black hover:text-white transition-all duration-300'>
-                View all partnerships
-              </button>
             </div>
 
             {/* Partner Stats */}

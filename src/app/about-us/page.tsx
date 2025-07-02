@@ -57,7 +57,7 @@ export default function AboutUsPage() {
       github: 'github.com/seangkimsinh',
       specialties: ['Business Strategy', 'Partnerships', 'Market Analysis'],
       experience: '4+ years',
-      image: '/kimsinh.png',
+      image: '/Kimsinh.png',
     },
     {
       id: 4,
@@ -70,7 +70,7 @@ export default function AboutUsPage() {
       github: 'github.com/kimlengsoth',
       specialties: ['UI/UX Design', 'User Research', 'Design Systems'],
       experience: '4+ years',
-      image: '/kimleng.png',
+      image: '/Kimleng.png',
     },
     {
       id: 5,
