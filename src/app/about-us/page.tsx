@@ -1,7 +1,27 @@
 'use client';
 
 import React from 'react';
-import { Users, Target, Award, Globe, Mail, Linkedin, Github, MapPin, Calendar, BookOpen } from 'lucide-react';
+import {
+  Users,
+  Target,
+  Award,
+  Globe,
+  Mail,
+  Linkedin,
+  Github,
+  MapPin,
+  Calendar,
+  BookOpen,
+  Code,
+  Brain,
+  Smartphone,
+  BarChart3,
+  Settings,
+  Lightbulb,
+  Trophy,
+  Star,
+  CheckCircle,
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const fadeInUp = {
@@ -109,7 +129,7 @@ export default function AboutUsPage() {
     },
     {
       label: 'Projects Completed',
-      value: '10+',
+      value: '50+',
       icon: <Target className='h-6 w-6' />,
     },
     {
@@ -145,6 +165,67 @@ export default function AboutUsPage() {
     },
   ];
 
+  const services = [
+    {
+      title: 'AI & Machine Learning',
+      description:
+        'Custom AI solutions, predictive analytics, and intelligent automation systems tailored to your business needs.',
+      icon: <Brain className='h-8 w-8' />,
+    },
+    {
+      title: 'Custom Software Development',
+      description:
+        'End-to-end software development from concept to deployment, built with modern technologies and best practices.',
+      icon: <Code className='h-8 w-8' />,
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.',
+      icon: <Smartphone className='h-8 w-8' />,
+    },
+    {
+      title: 'Data Analytics & Visualization',
+      description:
+        'Transform your data into actionable insights with advanced analytics and interactive visualization dashboards.',
+      icon: <BarChart3 className='h-8 w-8' />,
+    },
+    {
+      title: 'Technology Consulting',
+      description:
+        'Strategic technology guidance to help you make informed decisions and optimize your digital transformation journey.',
+      icon: <Lightbulb className='h-8 w-8' />,
+    },
+    {
+      title: 'System Integration',
+      description:
+        'Seamlessly connect your existing systems and applications to create a unified, efficient technology ecosystem.',
+      icon: <Settings className='h-8 w-8' />,
+    },
+  ];
+
+  const achievements = [
+    {
+      title: 'Best Innovation Award 2024',
+      description: 'Recognized by Cambodia Tech Summit for groundbreaking AI solutions in healthcare sector.',
+      icon: <Trophy className='h-8 w-8' />,
+    },
+    {
+      title: 'Top 10 Startups',
+      description: 'Selected as one of the top 10 most promising startups in Southeast Asia by TechCrunch Disrupt.',
+      icon: <Star className='h-8 w-8' />,
+    },
+    {
+      title: '99.9% Client Satisfaction',
+      description: 'Maintained exceptional client satisfaction rate across all projects and service deliveries.',
+      icon: <CheckCircle className='h-8 w-8' />,
+    },
+    {
+      title: 'Series A Funding',
+      description: 'Successfully raised $2.5M in Series A funding to accelerate product development and market expansion.',
+      icon: <Target className='h-8 w-8' />,
+    },
+  ];
+
   return (
     <div className='min-h-screen bg-white'>
       <main className='pt-20'>
@@ -158,13 +239,26 @@ export default function AboutUsPage() {
             <motion.h1 variants={fadeInUp} className='text-4xl md:text-5xl font-light text-gray-900 mb-6'>
               About Six Senergy
             </motion.h1>
+            <motion.p variants={fadeInUp} className='text-2xl font-light text-gray-700 mb-8'>
+              &quot;Empowering Tomorrow Through Intelligent Innovation&quot;
+            </motion.p>
             <motion.p variants={fadeInUp} className='text-xl text-gray-600 max-w-3xl mx-auto mb-8'>
               We are a passionate team of innovators, engineers, and creative minds dedicated to building the future of
               technology, one solution at a time.
             </motion.p>
-            <motion.div variants={fadeInUp} className='flex items-center justify-center text-gray-500'>
-              <MapPin className='h-5 w-5 mr-2' />
-              <span>Based in Phnom Penh, Cambodia</span>
+            <motion.div variants={fadeInUp} className='flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-500'>
+              <div className='flex items-center'>
+                <MapPin className='h-5 w-5 mr-2' />
+                <span>Based in Phnom Penh, Cambodia</span>
+              </div>
+              <div className='flex items-center'>
+                <Mail className='h-5 w-5 mr-2' />
+                <span>sixsynergy@gmail.com</span>
+              </div>
+              <div className='flex items-center'>
+                <Calendar className='h-5 w-5 mr-2' />
+                <span>Established 2020</span>
+              </div>
             </motion.div>
           </div>
         </motion.section>
@@ -210,6 +304,60 @@ export default function AboutUsPage() {
               We combine cutting-edge research with practical application, ensuring that our innovations are not just technically
               impressive, but also meaningful and accessible to those who need them most.
             </p>
+          </div>
+        </motion.section>
+
+        {/* Our Services */}
+        <motion.section
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className='py-16 px-4'>
+          <div className='max-w-6xl mx-auto'>
+            <motion.h2 variants={fadeInUp} className='text-3xl font-light text-gray-900 text-center mb-12'>
+              Our Services
+            </motion.h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className='text-center p-6 rounded-lg border border-gray-100 hover:shadow-lg transition-all duration-300'>
+                  <div className='flex justify-center mb-4 text-gray-700'>{service.icon}</div>
+                  <h3 className='text-xl font-medium text-gray-900 mb-4'>{service.title}</h3>
+                  <p className='text-gray-600 leading-relaxed'>{service.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Our Achievements */}
+        <motion.section
+          initial='initial'
+          whileInView='animate'
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className='py-16 px-4 bg-gray-50'>
+          <div className='max-w-6xl mx-auto'>
+            <motion.h2 variants={fadeInUp} className='text-3xl font-light text-gray-900 text-center mb-12'>
+              Our Achievements
+            </motion.h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              {achievements.map((achievement, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className='text-center p-6 rounded-lg border border-gray-100 hover:shadow-lg transition-all duration-300'>
+                  <div className='flex justify-center mb-4 text-gray-700'>{achievement.icon}</div>
+                  <h3 className='text-xl font-medium text-gray-900 mb-4'>{achievement.title}</h3>
+                  <p className='text-gray-600 leading-relaxed'>{achievement.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.section>
 
