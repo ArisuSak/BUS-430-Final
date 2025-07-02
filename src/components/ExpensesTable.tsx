@@ -3,7 +3,7 @@ import React from 'react';
 import { DollarSign, MapPin, Users, BookOpen, TrendingUp, Award, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-// @ts-ignore
+// @ts-expect-error - to ignore type
 const ExpensesTable = ({ expenses, totalCost }) => {
   const categoryIcons = {
     Transportation: <MapPin className='h-5 w-5' />,
