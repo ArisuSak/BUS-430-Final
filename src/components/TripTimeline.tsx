@@ -3,7 +3,7 @@ import React from 'react';
 import { Calendar, MapPin, CheckCircle, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-// @ts-ignore
+// @ts-expect-error - to igorn type
 const Timeline = ({ days, activeDay, setActiveDay }) => {
   return (
     <motion.section
